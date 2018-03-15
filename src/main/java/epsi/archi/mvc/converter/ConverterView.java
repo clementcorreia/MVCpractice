@@ -150,7 +150,8 @@ public class ConverterView implements Observer {
 
     @Override
     public void update(Observable observable) {
-        this.update((Model) observable);
+        if(observable instanceof Model)
+            update((Model) observable);
     }
 
     public void toggleCustomPanel(boolean state) {

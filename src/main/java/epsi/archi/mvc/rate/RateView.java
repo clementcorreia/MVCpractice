@@ -91,6 +91,7 @@ public class RateView implements Observer {
 
     @Override
     public void update(Observable observable) {
-        update((Model) observable);
+        if(observable instanceof Model)
+            update((Model) observable);
     }
 }
